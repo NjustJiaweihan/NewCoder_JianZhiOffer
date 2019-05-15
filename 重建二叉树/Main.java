@@ -39,6 +39,24 @@ class Solution {
                 rootIndex = i;
             }
         }
+        
+        //前序：1 2458 3697
+        //     ^         ^
+        //     |         |
+        // preStart   preEnd
+
+        //中序：4285   1    6937
+        //     ^      ^       ^
+        //     |      |       |
+        //inStart rootIndex  inEnd
+
+        //root.left = (2458)
+        //pre: 从  preStart+1  到  preStart+1(起点) + rootIndex-inStart(root.left个数) - 1
+        //in:  从  inStart     到  rootIndex-1
+
+        //root.right = (3697)
+        //pre: 从  (2458)结尾 + 1  到  preEnd
+        //in:  从  rootIndex+1    到  inEnd
 
         root.left = constract(pre, preStart+1, preStart+rootIndex-inStart, in, inStart, rootIndex-1);
 
