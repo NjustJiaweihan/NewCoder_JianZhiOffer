@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSInput;
-
 import java.util.ArrayList;
 
 class ListNode {
