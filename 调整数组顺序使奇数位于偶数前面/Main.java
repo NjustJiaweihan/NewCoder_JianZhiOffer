@@ -1,3 +1,5 @@
+//冒泡思路
+
 class Solution {
 
     public void reOrderArray(int[] array) {
