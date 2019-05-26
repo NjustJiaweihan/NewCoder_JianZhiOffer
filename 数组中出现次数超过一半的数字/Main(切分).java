@@ -15,7 +15,7 @@ class Solution {
 
         int lo = 0, hi = array.length-1;
 
-        while (lo < hi) {
+        while (lo <= hi) {
 
             int index = partion(array, lo, hi);
 
@@ -45,7 +45,11 @@ class Solution {
     }
 
     private int partion(int[] arr, int lo, int hi) {
+        //去掉这个if 试一下测试用例：{1,2}
+        if(lo == hi) {
 
+            return lo;
+        }
         int v = arr[lo];
 
         int i = lo, j = hi + 1;
@@ -105,7 +109,7 @@ public class Main {
     public static void main(String[] args) {
 
         Solution solution = new Solution();
-        int[] arr = {1,2};
+        int[] arr = {1,3};
         System.out.println(solution.MoreThanHalfNum_Solution(arr));
     }
 }
