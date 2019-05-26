@@ -15,7 +15,7 @@ class Solution {
 
         int lo = 0, hi = array.length-1;
 
-        while (lo < hi) {
+        while (lo <= hi) {
 
             int index = partion(array, lo, hi);
 
@@ -34,12 +34,10 @@ class Solution {
             } else if(index < array.length/2) {
 
                 lo = index + 1;
-                partion(array, lo, hi);
 
             } else {
 
                 hi = index - 1;
-                partion(array, lo, hi);
             }
         }
 
@@ -102,7 +100,6 @@ class Solution {
     }
 }
 
-//该代码在测试用例{1,2}会报错 TODO
 public class Main {
 
     public static void main(String[] args) {
