@@ -15,7 +15,7 @@ class Solution {
 
         int lo = 0, hi = array.length-1;
 
-        while (lo <= hi) {
+        while (lo < hi) {
 
             int index = partion(array, lo, hi);
 
