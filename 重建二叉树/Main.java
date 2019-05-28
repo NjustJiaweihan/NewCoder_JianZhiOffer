@@ -14,7 +14,10 @@ class Solution {
 
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) throws Exception {
 
-        if(pre == null || pre.length==0 || in==null || in.length==0) {
+        int lengthPre = pre.length;
+        int lengthIn = in.length;
+        
+        if(pre == null || lengthPre==0 || in==null || lengthIn==0 || lengthIn!=lengthPre) {
 
             return null;
         }
@@ -32,7 +35,7 @@ class Solution {
         TreeNode root = new TreeNode(pre[preStart]);
 
         int rootIndex = 0;
-        for(int i=0; i<in.length; i++)
+        for(int i=inStart; i<=inEnd; i++)
         {
             if(in[i] == pre[preStart]) {
 
