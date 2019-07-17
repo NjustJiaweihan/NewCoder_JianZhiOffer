@@ -36,7 +36,12 @@ public class Solution {
             return 0;
         }
 
-        //计算long型值 (其实不靠谱 万一溢出long呢)
+        //计算long型值 (直接用long其实不靠谱 万一溢出long呢)
+        if(str.length() > 10)
+        {
+            retrun 0;
+        }
+        
         long res = str.charAt(str.length()-1) - '0';
 
         for(int i=str.length()-2; i>=0; i--){
