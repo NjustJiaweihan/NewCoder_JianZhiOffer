@@ -11,6 +11,16 @@
 
 [大佬的正则](https://www.nowcoder.com/questionTerminal/6f8c901d091949a5837e24bb82a731f2)
 
+```java
+public class Solution {
+
+  public boolean isNumeric(char[] str) {
+
+        return String.valueOf(str).matches("[\\+\\-]?\\d*(\\.\\d+)?([eE][\\+\\-]?\\d+)?");
+   }
+}
+```
+
 ```
 [\\+\\-]?\\d*(\\.\\d+)?([eE][\\+\\-]?\\d+)?
 
