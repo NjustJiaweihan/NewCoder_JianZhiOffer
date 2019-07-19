@@ -20,7 +20,7 @@
 ### 技巧
 
 ‘str.length == 0 && pattern.length != 0 || str.length != 0 && pattern.length == 0’  
-                   |  
+                   &nbsp;|  
                    V  
 ‘str.length == 0 ^ pattern.length == 0’  
 
